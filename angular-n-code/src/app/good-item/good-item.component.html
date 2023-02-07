@@ -5,11 +5,13 @@
     alt="milk"
   />
   <div class="card-body">
-    <h5 class="card-title">{{ goodItem + 1 }}</h5>
+    <h5 class="card-title">{{ goodItem }}</h5>
     <p class="card-text">
       Небольшой пример текста, который должен основываться на названии карточки
       и составлять основную часть содержимого карты.
     </p>
-    <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
+    <a href="#" class="btn btn-primary" (click)="addGood(goodItem)"
+      >Перейти куда-нибудь</a
+    >
   </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-good-item',
@@ -7,8 +7,9 @@ import { Component, Input, Output } from '@angular/core';
 })
 export class GoodItemComponent {
   @Input() goodItem: string = '';
+  @Output() onAddGood = new EventEmitter();
 
-  // addGood(good: string) {
-  //   this.shopCart.push(good)
-  // }
+  addGood(good: string) {
+    this.onAddGood.emit(good)
+  }
 }
