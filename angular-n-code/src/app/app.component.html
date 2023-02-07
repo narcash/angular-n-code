@@ -1,19 +1,56 @@
-<h1>Hello {{ title }}</h1>
+<h1>{{ title }}</h1>
+<div *ngIf="shopCart.length">Товары в корзине: {{ shopCart[0] }}</div>
+<div class="card" style="width: 18rem" *ngFor="let good of goods">
+  <br /><br /><br /><br /><br /><br />
+  <app-good-item [goodItem]="good"></app-good-item>
+</div>
 
-<input [(ngModel)]="title" />
-
-<p>count: {{ count }}</p>
-<button (click)="increaseCount()">push</button>
-
-<h2 [class]="colorBG">hello</h2>
-<button (click)="changeBG('red')">red</button>
-<button (click)="changeBG('blue')">blue</button>
-
-<p [class.blueBG]="colorBG == 'redBG'">hello friends</p>
-<p [ngClass]="colorBG === 'redBG' ? 'redBG' : 'blueBG'">check text</p>
-
-<p [ngClass]="{ redBG: true, blueBG: false }">colors</p>
-
-<span [style]="spanStyles"> its span </span>
-
-<div [style.backgroundColor]="color">its div</div>
+<br /><br /><br /><br />
+<div class="card">
+  <div class="card-header">Цитата</div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>Известная цитата, содержащаяся в элементе цитаты..</p>
+      <footer class="blockquote-footer">
+        Кто-то известный в
+        <cite title="Заголовок источника">Заголовке источника</cite>
+      </footer>
+    </blockquote>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header">Цитата</div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>Известная цитата, содержащаяся в элементе цитаты..</p>
+      <footer class="blockquote-footer">
+        Кто-то известный в
+        <cite title="Заголовок источника">Заголовке источника</cite>
+      </footer>
+    </blockquote>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header">Цитата</div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>Известная цитата, содержащаяся в элементе цитаты..</p>
+      <footer class="blockquote-footer">
+        Кто-то известный в
+        <cite title="Заголовок источника">Заголовке источника</cite>
+      </footer>
+    </blockquote>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header">Цитата</div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>Известная цитата, содержащаяся в элементе цитаты..</p>
+      <footer class="blockquote-footer">
+        Кто-то известный в
+        <cite title="Заголовок источника">Заголовке источника</cite>
+      </footer>
+    </blockquote>
+  </div>
+</div>

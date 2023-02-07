@@ -6,20 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-n-code';
-  count = 0;
-  colorBG = '';
-  color = '';
+  title = 'shop';
+  shopCart: string[] = [];
+  goods: string[] = ['milk', 'apple', 'cheese', 'bread'];
 
-  spanStyles = {
-    'font-size': '53px', 'font-famile': 'Verdana'
-  }
-
-  increaseCount() {
-    this.count++;
-  }
-  changeBG(color: string) {
-    this.colorBG = color + 'BG';
-    this.color = color;
+  addGood(good: string) {
+    this.shopCart.push(good)
   }
 }
+
