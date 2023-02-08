@@ -1,19 +1,16 @@
-<h1>Hello {{ title }}</h1>
+<h1>{{ title }}</h1>
+<div *ngIf="shopCart.length">Товары в корзине: {{ shopCart[0] }}</div>
+<div class="card" style="width: 18rem" *ngFor="let good of goods">
+  <br /><br /><br /><br /><br /><br />
 
-<input [(ngModel)]="title" />
+  <app-good-item
+    [goodItem]="good"
+    (onAddGood)="addGood($event)"
+  ></app-good-item>
+</div>
 
-<p>count: {{ count }}</p>
-<button (click)="increaseCount()">push</button>
+<br /><br /><br /><br />
 
-<h2 [class]="colorBG">hello</h2>
-<button (click)="changeBG('red')">red</button>
-<button (click)="changeBG('blue')">blue</button>
+<app-new-item *ngFor="let item of news">{{ item }}</app-new-item>
 
-<p [class.blueBG]="colorBG == 'redBG'">hello friends</p>
-<p [ngClass]="colorBG === 'redBG' ? 'redBG' : 'blueBG'">check text</p>
-
-<p [ngClass]="{ redBG: true, blueBG: false }">colors</p>
-
-<span [style]="spanStyles"> its span </span>
-
-<div [style.backgroundColor]="color">its div</div>
+<router-outlet></router-outlet>
